@@ -6,15 +6,28 @@ form.addEventListener("submit", (event) => {
 
     const task = event.target.toDos.value;
 
-    const ul = document.querySelector("ul")
+    const ul = document.querySelector("ul");
 
-    const li = document.createElement("li")
+    const li = document.createElement("li");
 
-    li.append(task)
+    li.addEventListener("click", (event) => {
+        event.target.style.textDecoration = "line-through"
+    } )
 
-    ul.append(li)
+    const error = document.createElement("p");
 
-    console.log(task)
+    if (!task) {
+        error.innerText = "Error! Todo cannot be empty";
+
+        ul.before(error);
+
+    } else {
+
+        li.append(task);
+    
+        ul.append(li);
+
+    }
 
     form.reset()
 })
