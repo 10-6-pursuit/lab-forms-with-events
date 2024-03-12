@@ -11,8 +11,17 @@ form.addEventListener("submit", (event) => {
     const li = document.createElement("li");
 
     li.addEventListener("click", (event) => {
-        event.target.style.textDecoration = "line-through"
+        
+            if (event.target.style.textDecoration !== "line-through") {
+                event.target.style.textDecoration = "line-through"
+            } else {
+                event.target.style.textDecoration = "none"
+            }
+
+            console.log(event.target.style.textDecoration)
+
     } )
+    
 
     const error = document.createElement("p");
 
