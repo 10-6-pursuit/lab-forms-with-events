@@ -4,24 +4,13 @@ form.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
+    const tasks = event.target.toDos.value.split("\n");
+
     const task = event.target.toDos.value;
 
+    console.log(tasks)
+
     const ul = document.querySelector("ul");
-
-    const li = document.createElement("li");
-
-    li.addEventListener("click", (event) => {
-        
-            if (event.target.style.textDecoration !== "line-through") {
-                event.target.style.textDecoration = "line-through"
-            } else {
-                event.target.style.textDecoration = "none"
-            }
-
-            console.log(event.target.style.textDecoration)
-
-    } )
-    
 
     const error = document.createElement("p");
 
@@ -32,10 +21,25 @@ form.addEventListener("submit", (event) => {
 
     } else {
 
-        li.append(task);
-    
-        ul.append(li);
+        for (let task of tasks) {
 
+            const li = document.createElement("li");
+
+            li.addEventListener("click", (event) => {
+                
+                    if (event.target.style.textDecoration !== "line-through") {
+                        event.target.style.textDecoration = "line-through"
+                    } else {
+                        event.target.style.textDecoration = "none"
+                    }
+        
+            } )
+            
+            li.append(task);
+
+            ul.append(li);
+        }
+    
     }
 
     form.reset()
