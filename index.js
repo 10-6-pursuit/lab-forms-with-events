@@ -4,11 +4,11 @@ form.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    const tasks = event.target.toDos.value.split("\n");
+    const allTasks = event.target.toDos.value.split("\n");
+
+    const tasks = allTasks.filter(ele => ele !== "")
 
     const task = event.target.toDos.value;
-
-    console.log(tasks)
 
     const ul = document.querySelector("ul");
 
@@ -34,8 +34,19 @@ form.addEventListener("submit", (event) => {
                     }
         
             } )
-            
+
+            const del = document.createElement("button")
+
+            del.addEventListener("click", (event) => {
+
+                event.target.parentNode.remove()
+            })
+
+            del.innerText = "Delete"
+
             li.append(task);
+
+            li.append(del);
 
             ul.append(li);
         }
