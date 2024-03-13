@@ -1,5 +1,4 @@
-//do the event.default() to prevent refreshing page.
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   //Created own variables
     const $ = function(args) {
       return document.querySelector(args);
@@ -33,10 +32,14 @@ window.addEventListener("DOMContentLoaded", () => {
     
     form.on("submit", (event) => {
       event.preventDefault();
+
       const li = create("li");
+      li.setAttribute("class", "list")
 
       if(text.value === '') {
-        p.innerText = "Error!";
+        p.innerHTML = `
+          Error! No Text Input Detected. <br> Please input text before submitting.
+        `;
       } else {
         p.innerText = '';
         li.textContent = text.value;
@@ -45,12 +48,12 @@ window.addEventListener("DOMContentLoaded", () => {
       form.reset();
     })
 
-    //Function to Cross Out List-not currently working
-    const list = $$("li");
-    list.forEach((li) => {
-      li.on("dblclick", () => {
-        li.style.textDecoration = "line-through";
-      })
+    //Function to Cross Out To-Do Lists.
+    //Used Event Bubbling: https://typeofnan.dev/how-to-bind-event-listeners-on-dynamically-created-elements-in-javascript/  
+    //Add a ternary for toggling line-through
+    ul.on("click", function(e) {
+      if(e.target.classList.contains("list")) {
+        e.target.style.textDecoration === "line-through" ? e.target.style.textDecoration = 'none' : e.target.style.textDecoration = "line-through"
+      }
     })
-
 });
