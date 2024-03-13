@@ -37,6 +37,10 @@ form.addEventListener("submit", (event) => {
 
             const del = document.createElement("button")
 
+            del.classList.add("delete")
+
+            console.log(del)
+
             del.addEventListener("click", (event) => {
 
                 event.target.parentNode.remove()
