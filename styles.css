@@ -1,0 +1,30 @@
+.task-input {
+  min-width: 150px;
+}
+
+.expandable-textarea {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1px 6px;
+
+  display: block;
+  min-width: 100px;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.pointer {
+  cursor: pointer;
+}

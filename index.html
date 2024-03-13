@@ -1,8 +1,33 @@
-<html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+  <title>To-Do App Lab</title>
+</head>
+<body>
+  <header>
+    <h1>To-Dos</h1>
+  </header>
+  <hr>
+  <form class="form" id="form">
+    <textarea type="text" name="task" class="task-input" id="task-input" placeholder="Type 1 task per line!"></textarea><br>
+    <input type="submit" class="submit-button" id="submit-button" value="Add Task(s)">
+    <div class="input-errors">
+      <span class="empty-error">Error! Input cannot be Empty!</span>
+    </div>
+
+    <!-- <div 
+    class="expandable-textarea"
+    role="textbox"
+    contenteditable>Your default value
+    </div> -->
+  </form>
+  <ul class="list" id="list">
+    <!-- <li class="list-item"><span class="pointer">Task 1</span><input type="button" class="delete-button" value="Delete"></li>
+    <li class="list-item"><span class="pointer">Task 2</span><input type="button" value="Delete"></li> -->
+  </ul>
+</body>
 </html>
