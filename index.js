@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   //Created own variables
     const $ = function(args) {
@@ -20,10 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return document.createElement(args);
     }
   
-    HTMLElement.prototype.on = (a,b,c) => this.addEventListener(a,b,c);
+    HTMLElement.prototype.on = function(a, b, c) {
+      this.addEventListener(a, b, c);
+    };
   
-    HTMLElement.prototype.off = (a,b) => this.removeEventListener;
+    HTMLElement.prototype.off = function(a, b) {
+      this.removeEventListener(a,b)
+    };
 
+    function addGlobalEventListener(type, selector, callback) {
+      document.addEventListener(type, e => {
+        if (e.target.matches(selector)) callback(e)
+      })
+    };
     // ------------------------------------------------
     const form = $(".to-do__form");
     const text = $(".text-area");
@@ -39,10 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = create("li");
       li.className = "list";
 
-      //Problem here was using .on bc it had this.
-      li.addEventListener("click", deleteList);
-      li.addEventListener("click", lineThrough);
-
       //Create delete button
       const delBtn = create("button");
       delBtn.className = "delete";
@@ -54,27 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         p.innerText = '';
         li.textContent = text.value;
-        ul.appendChild(li);
-        li.appendChild(delBtn);
+        ul.appendChild(li).appendChild(delBtn);
       }
       form.reset();
     });
 
-    //Function to Cross Out To-Do Lists.
-    //Used Event Bubbling: https://typeofnan.dev/how-to-bind-event-listeners-on-dynamically-created-elements-in-javascript/  
+    
+    //Add / Remove line-through with global function.
     //Add a ternary for toggling line-through
-    function lineThrough(e) {
-      if(e.target.classList.contains("list")) {
-        e.target.style.textDecoration === "line-through" ? e.target.style.textDecoration = 'none' : e.target.style.textDecoration = "line-through"
-      }
-    };
+    addGlobalEventListener("click", ".list", e => {
+      e.target.style.textDecoration === "line-through" ? e.target.style.textDecoration = 'none' : e.target.style.textDecoration = "line-through";
+    })
 
-    function deleteList(e) {
-      if(e.target.classList.contains("delete")) {
-        // e.currentTarget.remove() this also works;
-        e.target.parentNode.remove();
-      }
-    };
+    //Delete lists
+    addGlobalEventListener("click", ".delete", e => {
+      e.target.parentNode.remove();
+    })
     
   });
 
