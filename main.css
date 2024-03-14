@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *,
 *:before,
 *:after {
@@ -19,7 +18,7 @@ body {
   background: linear-gradient(#000000, #1e1e1e, #414141, #404040, #000000);
   background-size: 400% 400%;
   animation: backgroundSlide 35s ease infinite;
-  font-family: "Space Mono", monospace;
+  font-family: "Fraunces", serif;
   color: whitesmoke;
 }
 
@@ -27,13 +26,13 @@ h1 {
   text-align: center;
   margin-top: 50px;
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 3rem;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -68,10 +67,11 @@ button {
   border-radius: 6px;
   height: 60px;
   width: 80px;
+  font-size: 1.25rem;
 }
 
 .submit {
-  background: rgb(52, 244, 52);
+  background: rgb(51, 219, 36);
 }
 
 .delete {
