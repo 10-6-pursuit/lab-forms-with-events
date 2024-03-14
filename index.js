@@ -5,18 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return document.querySelector(args);
     }
   
-    const $$ = function(args) {
-      return document.querySelectorAll(args);
-    }
-  
-    HTMLElement.prototype.$ = function(s) {
-      return this.querySelector(s);
-    }
-  
-    HTMLElement.prototype.$$ = function(s) {
-      return this.querySelectorAll(s);
-    }
-  
     const create = function(args) {
       return document.createElement(args);
     }
@@ -25,9 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       this.addEventListener(a, b, c);
     };
   
-    HTMLElement.prototype.off = function(a, b) {
-      this.removeEventListener(a,b)
-    };
 
     function addGlobalEventListener(type, selector, callback) {
       document.addEventListener(type, e => {
