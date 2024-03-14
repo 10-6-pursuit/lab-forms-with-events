@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-
 
 @keyframes backgroundSlide {
   0% {
@@ -17,20 +16,29 @@
 }
 
 body {
-  background: linear-gradient(#F15152, #EDB183, #a8dadc, #457b9d, #f15152);
+  background: linear-gradient(#000000, #1e1e1e, #414141, #404040, #000000);
   background-size: 400% 400%;
   animation: backgroundSlide 35s ease infinite;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", monospace;
+  color: whitesmoke;
 }
 
 h1 {
   text-align: center;
   margin-top: 50px;
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
 }
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 li {
@@ -40,25 +48,26 @@ li {
 .text-area {
   padding: 8px;
   border-radius: 6px;
-  width: 200px
+  width: 700px;
+  height: 60px;
+  font-size: 2rem;
 }
 
-.to-do,
-.to-do-list {
+.to-do__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.submit {
   margin-left: 20px;
 }
 
-.to-do h2 {
-  margin-left: 55px
-}
-
-.to-do-list {
-  text-align: center;
-}
-
 button {
-  padding: 8px 10px;
   border-radius: 6px;
+  height: 60px;
+  width: 80px;
 }
 
 .submit {
@@ -72,11 +81,10 @@ button {
 ul {
   display: flex;
   flex-direction: column;
-  margin-left: -40px;
 }
 
 li {
-  font-size: 20px;
+  font-size: 40px;
   text-align: left;
   margin-bottom: 10px;
 }
@@ -87,5 +95,8 @@ li {
   float: right;
 }
 
-
-
+hr {
+  /* display: flex; */
+  width: 800px;
+  border-color: pink;
+}
