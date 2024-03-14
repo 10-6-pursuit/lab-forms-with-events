@@ -1,17 +1,24 @@
 <html>
     <head>
       <script src="index.js"></script>
+      <link href="main.css" rel="stylesheet">
     </head>
     <body>
-      <h1> My To-Dos </h1> 
+      <h1>To-Do App</h1>
+      <main class="main">
+      <section class="to-do">
+      <h2> My To-Do </h2> 
         <form class="to-do__form">
           <label for="text"></label>
           <input type="text" class="text-area" placeholder="Type a to-do" name="text">
           <button class="submit">Submit</button>
         </form>
+      </section>
+      <section class="to-do-list">
+        <h2>My To-Do List</h2>
         <p></p>
-        <ul>
-          <!-- <li>Hello World <button>Delete</button> </li> -->
-        </ul>
+        <ul></ul>
+      </section>
+      </main>
     </body>
 </html>

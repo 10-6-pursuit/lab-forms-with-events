@@ -37,11 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //Create li
       const li = create("li");
-      li.setAttribute("class", "list");
+      li.className = "list";
+
+      //Problem here was using .on bc it had this.
+      li.addEventListener("click", deleteList);
+      li.addEventListener("click", lineThrough);
 
       //Create delete button
       const delBtn = create("button");
-      delBtn.setAttribute("class", "delete");
+      delBtn.className = "delete";
       delBtn.innerText = "Delete";
       
       //If no entry, output message
@@ -54,26 +58,23 @@ document.addEventListener("DOMContentLoaded", () => {
         li.appendChild(delBtn);
       }
       form.reset();
-    })
+    });
 
     //Function to Cross Out To-Do Lists.
     //Used Event Bubbling: https://typeofnan.dev/how-to-bind-event-listeners-on-dynamically-created-elements-in-javascript/  
     //Add a ternary for toggling line-through
-    ul.on("dblclick", function(e) {
+    function lineThrough(e) {
       if(e.target.classList.contains("list")) {
         e.target.style.textDecoration === "line-through" ? e.target.style.textDecoration = 'none' : e.target.style.textDecoration = "line-through"
       }
-    });
+    };
 
-    //Add functionality to our delete button
-    //Can we add it above??
-
-    
-    //Below deletes the Button not the list
-    ul.on("click", function(e) {
+    function deleteList(e) {
       if(e.target.classList.contains("delete")) {
-        e.target.remove();
+        // e.currentTarget.remove() this also works;
+        e.target.parentNode.remove();
       }
-    })
+    };
+    
+  });
 
-});

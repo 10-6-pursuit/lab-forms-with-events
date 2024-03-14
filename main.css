@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+@keyframes backgroundSlide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  background: linear-gradient(#F15152, #EDB183, #a8dadc, #457b9d, #f15152);
+  background-size: 400% 400%;
+  animation: backgroundSlide 35s ease infinite;
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+li {
+  list-style: none;
+}
+
+.text-area {
+  padding: 8px;
+  border-radius: 6px;
+  width: 200px
+}
+
+.to-do,
+.to-do-list {
+  margin-left: 20px;
+}
+
+.to-do h2 {
+  margin-left: 55px
+}
+
+.to-do-list {
+  text-align: center;
+}
+
+button {
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.submit {
+  background: rgb(52, 244, 52);
+}
+
+.delete {
+  background: rgb(248, 67, 73);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+}
+
+li {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.delete {
+  /* margin-left: 300px; */
+  justify-content: flex-end;
+  float: right;
+}
+
+
+
