@@ -1,8 +1,48 @@
-<html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do List App</title>
+		<script src="script.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>To Do App</h1>
+		</header>
+		<main>
+			<section class="form">
+				<h2>To-Do Form</h2>
+				<form id="form">
+					<div class="form__wrapper">
+						<label>
+							<input
+								type="text"
+								class="form__todo-task"
+								maxlength="50"
+								id="to-do"
+								name="toDo"
+								placeholder="Write your to do here.."
+								required
+							/>
+						</label>
+						<button class="form__btn" type="submit" value="Add">Add</button>
+					</div>
+				</form>
+			</section>
+			<section class="todos">
+				<h2>To-Do List</h2>
+				<ul class="todos-list">
+					<li class="todos__default">No Tasks</li>
+				</ul>
+			</section>
+		</main>
+	</body>
 </html>
