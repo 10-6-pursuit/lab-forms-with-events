@@ -36,7 +36,7 @@ And the following functionalities:
   5. Don't forget to append the created `li` to the list.
 
   </details>
-
+ghj
 - When the user writes _nothing_ in the `form`'s text input area and clicks `submit`, an error message (inside a `p` tag) should appear below the form.
 
   <details>
