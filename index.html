@@ -1,8 +1,61 @@
-<html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__heading">To Do App</h1>
+      <nav>
+        <a href="#" class="header__link">To Do</a>
+        <a href="./about-me.html" class="header__link">About Me</a>
+      </nav>
+    </header>
+    <main>
+      <section class="to-dos">
+        <h2 class="to-dos__heading">To-Do Form</h2>
+        <form class="to-dos__form">
+          <!-- <label for="to-do">
+                    Add To Do
+                </label>
+                    <input type="text" id="to-do" name="toDo" placeholder="Write your to do here.." required> -->
+          <label class="to-dos__label">
+            Add To Do
+            <br />
+            <input
+              type="text"
+              class="to-dos__input"
+              id="to-do"
+              name="toDo"
+              placeholder="Write your to do here.."
+              required
+            />
+          </label>
+          <input type="submit" value="Add" class="to-dos__submit-button" />
+          <!-- <button type="submit">Add</button> -->
+        </form>
+      </section>
+      <section class="to-dos">
+        <h2 class="to-dos__heading">To-Do List</h2>
+        <ul class="to-dos__list">
+          <li class="to-dos__list-item">
+            Task 1
+            <button class="to-dos__delete-button">Delete</button>
+          </li>
+          <li class="to-dos__list-item">
+            Task 2
+            <button class="to-dos__delete-button">Delete</button>
+          </li>
+          <li class="to-dos__list-item">
+            Task 3
+            <button class="to-dos__delete-button">Delete</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
