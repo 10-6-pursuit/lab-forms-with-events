@@ -62,7 +62,10 @@ ul {
 }
 
 li {
-    padding: 5px 0px; 
+    margin: 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer {

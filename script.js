@@ -13,7 +13,7 @@ addTaskButton.addEventListener("click", (event) => {
     ul.append(liTemplate);
     form.value = "";
     taskCount++;
-    document.querySelector("p").innerText = taskCount;
+    document.querySelector(".taskCount").innerText = taskCount;
     
     // remove error message if input is seuccseful
     if (error.innerText) { 
@@ -26,25 +26,38 @@ addTaskButton.addEventListener("click", (event) => {
   
 });
 
-// create template for list item (input text + delete button)
-function taskTemplate(task) {
-    const template = document.createElement("li");
-    const deleteButton = document.createElement("button");
-    // const p = document.createElement("p");
-    template.innerText = task;
-    // template.append(p);
-    deleteButton.innerText = "Delete";
-    template.append(deleteButton);
-    removeTask(deleteButton);
-    return template;
-  }
-
-// delete function
+// delete list item function
 function removeTask(element) {
     element.addEventListener("click", (event) => {
       event.target.parentNode.remove();
-      console.log(event.target);
       taskCount--;
-      document.querySelector("p").innerText = taskCount;
+      document.querySelector(".taskCount").innerText = taskCount;
     });
   } 
+
+  // add line through function
+function addLineThrough(element) {
+    element.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.currentTarget.style.textDecoration === "line-through" ? 
+      e.currentTarget.style.textDecoration = "none" :
+      e.currentTarget.style.textDecoration = "line-through";
+    })
+}
+
+// create template for list item (input text + delete button)
+function taskTemplate(task) {
+  const template = document.createElement("li");
+  const deleteButton = document.createElement("button");
+  const p = document.createElement("p");
+  
+  p.innerText = task;  
+  template.appendChild(p);
+  addLineThrough(p);
+
+  deleteButton.innerText = "Delete";
+  template.append(deleteButton);
+  removeTask(deleteButton);
+
+  return template;
+}
