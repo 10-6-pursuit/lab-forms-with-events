@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: antiquewhite;
+  }
+  
+  .header {
+    background: rgb(3, 142, 33);
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+    color: white;
+  }
+  
+  .header__link {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+  }
+  
+  main {
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    grid-template-columns: repeat(2, 1fr);
+    margin: 8px;
+  }
+  
+  .to-dos__input {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px lightgray solid;
+    margin-top: 10px;
+  }
+  
+  .to-dos__label {
+    margin-left: 5px;
+  }
+  
+  .to-dos__submit-button {
+    background: rgb(151, 52, 208);
+    color: white;
+    font-family: 'Gill Sans MT';
+    border-width: 50px;
+    border: solid gray;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  .to-dos__list {
+    list-style: none;
+    padding-left: 0px;
+    color: steelblue;
+  }
+  
+  .to-dos__list-item {
+    display: flex;
+    padding: 3px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .to-dos__delete-button {
+    color: white;
+    background-color: rgb(14, 12, 171);
+    border-radius: 50px;
+    border: none;
+    padding: 4px 8px;
+  }
+  
+  .to-dos__heading {
+    color: crimson;
+  }
+  
+  .strike-thru {
+    text-decoration: line-through;
+  }
