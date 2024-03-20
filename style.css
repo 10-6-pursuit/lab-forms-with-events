@@ -1,0 +1,11 @@
+.strike-thru {
+    text-decoration: line-through;
+  }
+
+.to-dos__delete-button {
+    color: white;
+    background-color: rgb(14, 12, 171);
+    border-radius: 50px;
+    border: none;
+    padding: 4px 8px;
+  }

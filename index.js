@@ -3,16 +3,23 @@
 // const todo = document.getElementById("todo");
 const form = document.getElementById("to-do-form");
 
-const button = document.getElementsByTagName("button");
+// const submitbutton = document.getElementById("submitbutton");
+// function addDeleteToButton (bttn) {
+//     bttn.addEventListener("click", event => {
+//         event.target.parentNode.remove();
+//     })
+// }
+
+// const buttons = document.querySelectorAll(".to-dos__delete-button");
+
+// for (const button of buttons) {
+//     addDeleteToButton(button);
+// }
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
   
     const todoText = event.target.todotask.value;
-
-    // const button = document.createElement("button");
-    // todoLi.appendChild(button);
-    // document.querySelector("ul").appendChild(todoLi);
 
     if(!todoText) {
         const p = document.createElement("p");
@@ -29,6 +36,9 @@ form.addEventListener("submit", (event) => {
 
     const todoLi = document.createElement("li");
     todoLi.innerText = todoText;
+    // const button = document.createElement("button");
+    // todoLi.appendChild(button);
+    // document.querySelector("ul").appendChild(todoLi);
     todoLi.addEventListener("click", (e) => {
         e.target.style.textDecoration = "line-through";
     })
