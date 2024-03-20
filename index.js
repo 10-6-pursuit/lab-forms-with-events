@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
     // button.innerText = "Delete";
     // addDeleteToButton(button);
   
-    // form.reset();
+    form.reset();
   
   });
 
