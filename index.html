@@ -1,8 +1,27 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <script src="index.js" defer></script>
+      <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+      <div class="main">
+        <h1 class="title">Act Now</h1>  
+        <form class="form">
+          <label class="label">
+            To Do:
+            <input class="to-do-input" type="text">
+            <button class="submit-button" type="submit"></button>
+          </label>
+          <img class="task-icon" src="./images/task.gif">
+        </form> 
+        <ul class="to-do-list">
+
+        </ul> 
+        <div class="message-box">
+          <img class="x-icon" src="./images/cancel.png">
+          <p class="message-text">There is nothing to add!!</p>
+          <button class="btn" type="button">Ok</button>
+        </div>
+      </div>  
     </body>
 </html>
