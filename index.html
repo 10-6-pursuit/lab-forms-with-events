@@ -1,8 +1,24 @@
-<html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>My To-Dos</title>
+</head>
+<body>
+  <main>
+    <h1> My To-Dos </h1>
+    <div>
+      <ul id="to-do-list"></ul>
+    </div>
+    <div id="form-container">
+      <form id="to-do-form">
+        <input type="text" name="todotask" id="todotask" placeholder="Type a todo">
+      </form>
+      <button type="submit" form="to-do-form" id="submitbutton">Submit</button>
+    </div>
+  </main>
+</body>
 </html>
