@@ -1,0 +1,101 @@
+body {
+    background-color: white
+}
+
+.main {
+    display: inline-block;
+    gap: 20px;
+    margin-left: 37%;
+    width: 400px;
+}
+
+.title {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.label {
+    display: block;
+    text-align: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 47px;
+}
+
+.to-do-input {
+    display: flex;
+    height: 20px;
+    margin-top: 7.5px;
+}
+
+.form {
+    display: flex;
+    gap: 60px;
+}
+
+.task-icon {
+    display: flex;
+    width: 90px;
+    margin-top: 22px;
+}
+
+.submit-button {
+    display: flex;
+    margin-top: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-left: 40%;
+    background-image: url("./images/checklist.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.to-do-list {
+    margin-top: 50px;
+}
+
+
+.message-box {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    background: rgb(229, 136, 136);
+    border: 1px solid gray;
+    
+    border-style: outset;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+
+
+}
+
+.x-icon {
+    
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: 90px;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(229, 136, 136, 0.2);
+}
+
+.message-text {
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 55px;
+    font-size: larger;
+    color: white;
+}
+
+.btn {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 105px;
+    width: 80px;
+    cursor: pointer;
+}
